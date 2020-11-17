@@ -6,6 +6,8 @@ services:
       context: ./python
     tty: true
     stdin_open: true
+    ports:
+      - 3000:8000
     volumes:
       - /etc/localtime:/etc/localtime
       - ~/.bashrc:/home/ubuntu/.bashrc
