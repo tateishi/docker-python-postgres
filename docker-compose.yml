@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  default:
+    build:
+      context: ./python
+    tty: true
+    stdin_open: true
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - ~/.bashrc:/home/ubuntu/.bashrc
+      - ~/.dotconfig:/home/ubuntu/.dotconfig
+      - ~/wks/src:/home/ubuntu/wks/src
