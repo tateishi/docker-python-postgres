@@ -20,5 +20,13 @@ services:
     volumes:
       - db:/var/lib/postgresql/data
 
+  phppgadmin:
+    build:
+      context: ./phppgadmin
+    environment:
+      - PHP_PG_ADMIN_SERVER_HOST=postgres
+    ports:
+      - 3001:80
+
 volumes:
   db:
