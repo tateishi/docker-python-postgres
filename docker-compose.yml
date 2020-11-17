@@ -11,3 +11,14 @@ services:
       - ~/.bashrc:/home/ubuntu/.bashrc
       - ~/.dotconfig:/home/ubuntu/.dotconfig
       - ~/wks/src:/home/ubuntu/wks/src
+
+  postgres:
+    build:
+      context: ./postgres
+      args:
+        - POSTGRES_PASSWORD
+    volumes:
+      - db:/var/lib/postgresql/data
+
+volumes:
+  db:
