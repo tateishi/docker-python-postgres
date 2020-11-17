@@ -28,5 +28,13 @@ services:
     ports:
       - 3001:80
 
+  adminer:
+    build:
+      context: ./adminer
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+    ports:
+      - 3002:8080
+
 volumes:
   db:
